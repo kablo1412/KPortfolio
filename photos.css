@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+}
+.grid {
+    width: 100%;
+    height: 2000px;
+    display: grid;
+    grid-template: repeat(20, 1fr) / repeat(10, 1fr);
+}
+
+.header {
+    background-color: #90ee90;
+    grid-area: 1 / 1 / 6 / 11;
+    cursor:default;
+    position: relative;
+}
+
+.header::before,
+.header::after {
+    height: 150px;
+    width: 150px;
+    background-color:#90ee90;
+    position: absolute;
+    content: "";
+    bottom: -1em;
+    z-index: 100;
+}
+
+.header::before{
+    transform: skew(0 ,20deg);
+    right: 49.9%;
+}
+
+.header::after {
+    transform: skew(0, -20deg);
+    left: 50%;
+    color:#2a4d2a
+}
+
+h1{
+    font-family: 'Krona One', sans-serif;
+    color: #90ee90;
+    -webkit-text-stroke: 1.5px #90ee90;
+    text-shadow:1px 1px 1px #6cb36c, 3px 3px 3px #569c56, 7px 7px 7px #447e44, 9px 9px 9px #366436,11px 11px 11px #2a4d2a;
+    text-align: center;
+    top: 38%;
+    position: relative;
+    font-size: 5em;
+}
+
+.navigacija {
+    grid-area: 2 / 8 / 5 / 10;
+    background-color: #90ee90;
+    position: relative;
+    font-family: 'Krona One', sans-serif;
+    box-shadow: 1px 1px 1px #6cb36c, 3px 3px 3px #569c56, 7px 7px 7px #447e44, 9px 9px 9px #366436,11px 11px 11px #2a4d2a;
+    transform: skewy(10deg);
+    border-radius: 15px;
+}
+
+.nav-item {
+    color: #90ee90;
+    text-decoration: none;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    margin: 37px auto;
+    font-size: 1.3em;
+    outline: none;
+    letter-spacing: 2px;
+    transition-duration: .1.6s;
+    transition-timing-function: ease-in-out;
+    text-shadow:  3.5px 3.5px 3.5px rgb(38, 41, 37);
+}
+
+.nav-item:hover {
+    text-shadow:  5px 5px 5px black;
+}
+
+img {
+    max-width: 100%;
+}
+
+.slike {
+    grid-area: 6 / 1 / 21 / 11;
+    background-color: #ccccf0;
+    display: grid;
+    height: 400vh;
+    grid-template: repeat(18, 1fr) / repeat(11, 1fr);
+    column-gap: 20px;
+}
+
+.slika {
+    background-position: center;
+    background-size: cover;
+}
+
+.prva {
+    grid-area: 2 / 2 / 5 / 5;
+}
+.druga {
+    grid-area: 2 / 5 / 4 / 8;
+}
+
+.treca {
+    grid-area: 2 / 8 / 4 / 11;
+}
+.cetvrta {
+    grid-area: 6 / 2 / 8 / 5;
+}
+.peta {
+    grid-area: 6 / 5 / 8 / 8;
+}
+.sesta {
+    grid-area: 6 / 8 / 8 / 11;
+}
+.sedma {
+    grid-area: 10 / 2 / 12 / 5;
+}
+.osma {
+    grid-area: 10 / 5 / 12 / 8;
+}
+.deveta {
+    grid-area: 10 / 8 / 12 / 11;
+}
+.deseta {
+    grid-area: 14 /2 / 16 / 5;
+}
+.jedanaesta {
+    grid-area: 14 / 5/ 16 / 8;
+}

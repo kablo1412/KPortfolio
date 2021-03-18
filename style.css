@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+     scroll-behavior: smooth;
+ 
+}
+
+/* gridddddddddddddddddd */
+.grid {
+    width: 100%;
+    height: 2000px;
+    display: grid;
+    grid-template: repeat(20, 1fr) / repeat(10, 1fr);
+}
+
+.header {
+    background-color: #90ee90;
+    grid-area: 1 / 1 / 6 / 11;
+    cursor:default;
+    position: relative;
+}
+.header::before,
+.header::after {
+    height: 150px;
+    width: 150px;
+    background-color:#90ee90;
+    position: absolute;
+    content: "";
+    bottom: -1em;
+    z-index: 100;
+}
+
+.header::before{
+    transform: skew(0 ,20deg);
+    right: 49.9%;
+}
+
+.header::after {
+    transform: skew(0, -20deg);
+    left: 50%;
+    color:#2a4d2a
+}
+
+.navigacija {
+    grid-area: 2 / 8 / 5 / 10;
+    background-color: #90ee90;
+    position: relative;
+    font-family: 'Krona One', sans-serif;
+    box-shadow: 1px 1px 1px #6cb36c, 3px 3px 3px #569c56, 7px 7px 7px #447e44, 9px 9px 9px #366436,11px 11px 11px #2a4d2a;
+    transform: skewy(10deg);
+    border-radius: 15px;
+}
+
+.nav-item {
+    color: #90ee90;
+    text-decoration: none;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    margin: 37px auto;
+    font-size: 1.3em;
+    outline: none;
+    letter-spacing: 2px;
+    transition-duration: .1.6s;
+    transition-timing-function: ease-in-out;
+    text-shadow:  3.5px 3.5px 3.5px rgb(38, 41, 37);
+}
+
+.nav-item:hover {
+    text-shadow:  5px 5px 5px black;
+}
+
+
+#omeni {
+    background-color: #f3b557;
+    grid-area: 6 / 1 / 12 / 11;
+    color: #21223d;
+    position: relative;
+}
+
+#omeni::before,
+#omeni::after {
+    height: 150px;
+    width: 150px;
+    background-color: #f3b557;
+    position: absolute;
+    content: "";
+    z-index: 100;
+    bottom: -1em;
+}
+
+#omeni::before{
+    transform: skew(0 ,20deg);
+    right: 49.9%;
+}
+
+#omeni::after {
+    transform: skew(0, -20deg);
+    left: 50%;
+}
+
+
+#meonsocials {
+    background-color: #20b2aa;
+    grid-area: 12 / 1 / 17/ 11;
+    position: relative;
+}
+
+.fab{
+    font-size: 45px;
+    cursor: pointer;
+}
+.fab:hover {
+    transform: rotate(360deg);
+    transition-duration: 1.2s;
+    color: white;
+}
+.instagram {
+    padding-top: 90px;
+}
+.instagram,.facebook,.github,.spotify {
+    padding-bottom: 40px;
+}
+.mreze {
+    text-decoration: none;
+    color: #21223d;
+    outline: none;
+}
+.socijalno {
+    display: grid;
+    place-items: center;
+}
+
+.footer {
+    background-color: #f0e68c;
+    grid-area: 17 / 1 / 21/ 11;
+}
+
+.tekstomeni {
+    padding-top: 90px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+#meonsocials::before,
+#meonsocials::after {
+    height: 150px;
+    width: 150px;
+    background-color: #20b2aa;
+    position: absolute;
+    content: "";
+    bottom: -1em;
+    z-index: 100;
+}
+
+#meonsocials::before{
+    transform: skew(0 ,20deg);
+    right: 49.9%;
+}
+
+#meonsocials::after {
+    transform: skew(0, -20deg);
+    left: 50%;
+}
+
+h1{
+    font-family: 'Krona One', sans-serif;
+    color: #90ee90;
+    -webkit-text-stroke: 1.5px #90ee90;
+    text-shadow:1px 1px 1px #6cb36c, 3px 3px 3px #569c56, 7px 7px 7px #447e44, 9px 9px 9px #366436,11px 11px 11px #2a4d2a;
+    text-align: center;
+    top: 38%;
+    position: relative;
+    font-size: 5em;
+}
+
+h4 {
+    font-family: 'Krona One' , sans-serif;
+    font-size: 2em;
+    padding-top: 25px;
+
+}
+
+.tekstomeni p {
+    font-family: 'Jura' ,sans-serif;
+    font-size: 1.3em;
+    padding-top: 50px;
+}
+
+.kraj {
+    grid-area: 17 / 1 / 21/ 11;
+    background-color: #c54838;
+    color: #21223d;
+    font-family: 'Jura', sans-serif;
+    font-size: bold;
+    text-align: center;
+    padding: 36px 0;
+    font-weight: 700;
+}
+
+.fas {
+    font-size: 35px;
+    padding: 22px;
+    color: #21223d;
+}
+
+.kraj p {
+    padding-bottom: 30px;
+}
+
+.lokacija {
+    padding-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+     font-size: 3em;
+    }
+    .tekstomeni {
+        font-size: 12px;
+    }
+    hr {
+        padding: 0 0;
+    }
+    .tekstomeni p{
+        padding: 0 0;
+    }
+    
+    .navigacija {
+        grid-area: 1 / 2 / 1 / 10;
+        transform: none;
+
+    }
+    .nav-item{
+        font-size: 0.8em;
+        margin: 10px auto;
+    }
+}
